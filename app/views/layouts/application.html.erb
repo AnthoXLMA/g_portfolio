@@ -10,26 +10,28 @@
   </head>
 
   <body>
-    <!-- Navbar sticky -->
-    <nav class="bg-gray-900 text-white px-6 py-4 shadow-md flex justify-between items-center sticky top-0 z-50">
-      <!-- Logo -->
-      <div class="flex items-center space-x-3">
-        <%= link_to root_path, class: "flex items-center" do %>
-          <img src="<%= asset_path('GimixVisualArtCollections.png') %>" alt="Logo Gimix" class="h-8 w-8 mr-2">
-          <span class="text-xl font-bold hover:text-gray-300">Gimix Collections</span>
-        <% end %>
-      </div>
+  <!-- Navbar sticky -->
+  <nav style="justify-content: center; background:#f9f9f9; padding: 10px;">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <%= link_to root_path, class: "flex items-center" do %>
+        <img src="<%= asset_path('GimixVisualArtCollections.png') %>" alt="Logo Gimix" style="width:40%;height:auto; margin-left:auto; margin-right:auto;">
+      <% end %>
+    </div>
 
-      <!-- Menu desktop -->
-      <div class="hidden md:flex space-x-6 text-lg">
-        <%= link_to "Accueil", root_path, class: "hover:text-gray-300" %>
-        <%= link_to "Galerie", galerie_path, class: "hover:text-gray-300" %>
-        <%= link_to "À propos", a_propos_path, class: "hover:text-gray-300" %>
-        <%= link_to "Contact", contact_path, class: "hover:text-gray-300" %>
-      </div>
-
-
-    </nav>
-      <%= yield %>
+    <!-- Menu desktop -->
+    <div style="display: flex; justify-content: center; list-style: none; margin: 0; padding: 0; gap: 30px;">
+      <%= link_to "Accueil", root_path, class: "hover:text-gray-300" %>
+      <%= link_to "Galerie", galerie_path, class: "hover:text-gray-300" %>
+      <%= link_to "À propos", a_propos_path, class: "hover:text-gray-300" %>
+      <%= link_to "Contact", contact_path, class: "hover:text-gray-300" %>
+    </div>
+  </nav>
+  <%= yield %>
+  <footer>
+    <div style="text-align: center">
+      <p>&copy; 2025 Gimix Collections. Tous droits réservés.</p>
+    </div>
+  </footer>
   </body>
 </html>

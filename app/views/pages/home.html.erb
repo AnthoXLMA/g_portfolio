@@ -1,30 +1,22 @@
-<section>
-  <h1>Bienvenue dans l’univers de Gimix Collections</h1>
-    <p>Je suis photographe professionnel spécialisé dans la capture de moments authentiques, de paysages immersifs et de récits visuels pour les voyageurs, hôtels et marques inspirées.</p>
-  <div>
-    <%= link_to "Voir la Galerie", galerie_path %>
-    <%= link_to "En savoir plus", a_propos_path %>
+<section class="resume">
+    <%= image_tag "_MG_1955.JPG" %>
+  <div style="text-align: center;">
+    <h1>Bienvenue</h1>
+      <p>Je suis photographe professionnel spécialisé dans la capture de moments authentiques, de paysages immersifs et de récits visuels pour les voyageurs, hôtels et marques inspirées.</p>
+    <div>
+      <%= link_to "Voir la Galerie", galerie_path %>
+      <%= link_to "En savoir plus", a_propos_path %>
+    </div>
   </div>
 </section>
 
-<section class="gallery-section">
-  <h2>Galeries</h2>
-  <div class="grid-gallery">
-      <% ["_MG_1955.JPG", "_MG_1956.JPG", "_MG_2109.JPG", "_MG_2110.JPG", "_MG_2270.JPG", "_MG_2321.JPG"].each do |img| %>
-      <div><%= image_tag img %></div>
-    <% end %>
-  </div>
-</section>
-
-<section>
-  <h2>Travaillons ensemble</h2>
-  <p>
-    Vous êtes une marque, un hôtel ou un éditeur en quête d’un regard singulier sur le monde ? Parlons de votre projet.
-  </p>
-  <%= link_to "Me contacter", contact_path, class: "bg-gray-900 text-white px-6 py-3 rounded-xl hover:bg-gray-700 transition" %>
-</section>
-
-
+  <section class="gallery-section">
+    <div class="grid-gallery">
+        <%["_MG_1955.JPG", "_MG_1956.JPG", "_MG_2109.JPG", "_MG_2110.JPG", "_MG_2270.JPG", "_MG_2321.JPG", "_MG_2247.JPG", "_MG_2248.JPG"].each do |img| %>
+        <div><%= image_tag img %></div>
+      <% end %>
+    </div>
+  </section>
 
 <style>
     body {
@@ -32,7 +24,18 @@
       margin: 0;
       padding: 0;
     }
-
+    h1 {
+      font-size: 3rem;
+    }
+    .resume{
+      padding:40px;
+      bottom: 10px;
+      top:10px;
+      width:100%;
+      height:auto;
+      background-color: black;
+      color:white;
+    }
     .gallery-section {
       padding: 40px;
       background: #f9f9f9;

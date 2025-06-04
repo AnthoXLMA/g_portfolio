@@ -1,16 +1,4 @@
 <section class="resume">
-  <div style="text-align: center; margin-bottom: 20px;">
-    <h1>Bienvenue</h1>
-      <p>Anthony Mania capture les moments authentiques, </p>
-        <p>les paysages immersifs et </p>
-          <p>les récits visuels pour les voyageurs, hôtels et marques inspirées.</p>
-    <div>
-      <%= link_to "Voir la Galerie", galerie_path %>
-      <%= link_to "En savoir plus", a_propos_path %>
-      <%= link_to "New York", new_york_path %>
-    </div>
-  </div>
-
   <!-- Diaporama -->
   <div class="slideshow-container">
     <%= image_tag "_MG_1955.JPG", class: "slide" %>
@@ -19,14 +7,21 @@
   </div>
 </section>
 
+<section class="gallery-section">
+  <div class="grid-gallery">
+      <%["_MG_1955.JPG", "_MG_1956.JPG", "_MG_2109.JPG", "_MG_2110.JPG", "_MG_2270.JPG", "_MG_2321.JPG", "_MG_2247.JPG", "_MG_2248.JPG"].each do |img| %>
+      <div><%= image_tag img %></div>
+    <% end %>
+  </div>
+</section>
 
-  <section class="gallery-section">
-    <div class="grid-gallery">
-        <%["_MG_1955.JPG", "_MG_1956.JPG", "_MG_2109.JPG", "_MG_2110.JPG", "_MG_2270.JPG", "_MG_2321.JPG", "_MG_2247.JPG", "_MG_2248.JPG"].each do |img| %>
-        <div><%= image_tag img %></div>
-      <% end %>
-    </div>
-  </section>
+<div style="text-align: center; margin-bottom: 20px;">
+  <div>
+    <%= link_to "Voir la Galerie", galerie_path %>
+    <%= link_to "En savoir plus", a_propos_path %>
+    <%= link_to "New York", new_york_path %>
+  </div>
+</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -52,13 +47,14 @@
 
 <style>
   body {
-    font-family: sans-serif;
+    font-family: 'Lato';
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
   h1 {
-    font-size: 3rem;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 2rem;
   }
   .resume{
     padding:40px;
@@ -92,7 +88,7 @@
   }
   .gallery-section {
     padding: 40px;
-    background: #f9f9f9;
+    background: white;
     text-align: center;
   }
 
